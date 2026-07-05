@@ -1,21 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Parikchit Sen</title>
-
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Parikchit Sen</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-    <h1>Hello, I'm Parikchit Sen</h1>
+<div class="scanline" aria-hidden="true"></div>
 
-    <p>Welcome to my portfolio website.</p>
+<nav id="nav">
+  <span class="nav-mark">PS</span>
+  <div class="nav-links">
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
 
-    <script src="script.js"></script>
+<header class="hero">
+  <p class="eyebrow">Computer Engineering &mdash; Kathmandu University</p>
+  <h1>Parikchit Sen</h1>
+  <p class="hero-sub">I build graphics engines, local AI pipelines, and a steadily growing comfort with the Linux command line.</p>
+</header>
 
+<main>
+
+  <section id="about" class="section">
+    <div class="section-label">About</div>
+    <div class="section-body">
+      <p>I'm a computer engineering student at Kathmandu University (batch of 2023), currently working through coursework in algorithms, computer graphics, databases, and software engineering. Alongside that, I build full projects end to end &mdash; from a hackathon-winning road safety tool to a reinforcement-learning traffic controller, a hospital management system, and a search engine built from scratch.</p>
+      <p>I recently moved my daily development environment from Windows to Ubuntu, and most evenings now involve some mix of GPU driver configuration, OpenGL debugging, and Neovim motions. When I'm not at a terminal, I'm usually tracking down an old film worth watching or reorganizing a music library.</p>
+    </div>
+  </section>
+
+  <section id="projects" class="section">
+    <div class="section-label">Projects</div>
+    <div class="section-body">
+
+      <article class="project project-featured">
+        <div class="project-head">
+          <span class="badge">Hackathon Winner</span>
+          <h3>CMF Modelling</h3>
+          <p class="project-tagline">Crash modification factors that suggest road safety improvements</p>
+        </div>
+        <p class="project-desc">A hackathon-winning tool that models crash modification factors for road segments and generates targeted suggestions for improving safety. Built around a retrieval-augmented pipeline over road safety literature, surfaced through a TypeScript frontend.</p>
+        <ul class="project-tags">
+          <li>TypeScript</li>
+          <li>RAG</li>
+          <li>Road Safety</li>
+        </ul>
+      </article>
+
+      <article class="project project-featured">
+        <div class="project-head">
+          <span class="badge badge-muted">In Progress</span>
+          <h3>Traffic Congestion Controller</h3>
+          <p class="project-tagline">Reinforcement learning for adaptive traffic signal control</p>
+        </div>
+        <p class="project-desc">An ongoing project using reinforcement learning to adaptively manage traffic signal timing and ease congestion, building on earlier research into RL and explainable AI approaches for traffic management.</p>
+        <ul class="project-tags">
+          <li>Reinforcement Learning</li>
+          <li>Python</li>
+          <li>Traffic Systems</li>
+        </ul>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>KU Healthcare</h3>
+          <p class="project-tagline">Hospital-side management system</p>
+        </div>
+        <p class="project-desc">A hospital management system covering the hospital-side workflow &mdash; patient records, staff, and day-to-day operations &mdash; built on the PERN stack.</p>
+        <ul class="project-tags">
+          <li>PostgreSQL</li>
+          <li>Express</li>
+          <li>React</li>
+          <li>Node.js</li>
+        </ul>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>Search Engine</h3>
+          <p class="project-tagline">A web crawler and search index built from scratch</p>
+        </div>
+        <p class="project-desc">Covers the full pipeline from crawling pages to building an inverted index to ranking and serving search results.</p>
+        <ul class="project-tags">
+          <li>Web Crawler</li>
+          <li>Indexing</li>
+        </ul>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>SoilSense AI</h3>
+          <p class="project-tagline">A soil-scanning app with an AI advisor that runs offline</p>
+        </div>
+        <p class="project-desc">A React Native front end paired with a local retrieval-augmented generation backend. A user scans a soil sample and the app returns crop recommendations, treatment suggestions, and field advice, grounded in agricultural reference material from NARC, MoALD, and the FAO, served through Ollama running quantized Qwen2.5 and Gemma 2 models on a local GPU.</p>
+        <ul class="project-tags">
+          <li>React Native</li>
+          <li>Ollama</li>
+          <li>RAG</li>
+        </ul>
+      </article>
+
+      <article class="project">
+        <div class="project-head">
+          <h3>Computer Graphics Suite</h3>
+          <p class="project-tagline">Rasterization algorithms implemented from scratch</p>
+        </div>
+        <p class="project-desc">Bresenham and DDA line drawing, midpoint circle generation, 2D transformations, and clipping algorithms (Cohen&ndash;Sutherland, Sutherland&ndash;Hodgman) through the full 2D viewing pipeline, built with GLFW and GLAD2 in C++.</p>
+        <ul class="project-tags">
+          <li>C++</li>
+          <li>OpenGL</li>
+          <li>GLFW</li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <section id="skills" class="section">
+    <div class="section-label">Skills</div>
+    <div class="section-body skills-grid">
+      <div class="skill-group">
+        <p class="skill-heading">Languages</p>
+        <p>C++, Python, JavaScript / TypeScript</p>
+      </div>
+      <div class="skill-group">
+        <p class="skill-heading">Systems</p>
+        <p>Linux (Ubuntu), NVIDIA Optimus configuration, Git</p>
+      </div>
+      <div class="skill-group">
+        <p class="skill-heading">Graphics &amp; AI</p>
+        <p>OpenGL, GLFW / GLAD, Ollama, RAG pipelines</p>
+      </div>
+      <div class="skill-group">
+        <p class="skill-heading">Tools</p>
+        <p>Neovim / LazyVim, GitHub, Termux</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="education" class="section">
+    <div class="section-label">Education</div>
+    <div class="section-body">
+      <div class="edu-entry">
+        <p class="edu-degree">B.E. in Computer Engineering</p>
+        <p class="edu-meta">Kathmandu University &mdash; Batch of 2023, in progress</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section">
+    <div class="section-label">Contact</div>
+    <div class="section-body">
+      <p>Reach out about SoilSense AI, computer graphics, or anything Linux.</p>
+      <ul class="contact-links">
+        <li><a href="mailto:parikchitsen77@gmail.com">parikchitsen77@gmail.com</a></li>
+        <li><a href="tel:+9779829276685">+977 982 927 6685</a></li>
+        <li><a href="https://github.com/ParikchitSen" target="_blank" rel="noopener">github.com/ParikchitSen</a></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>Built by Parikchit Sen.</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
