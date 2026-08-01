@@ -91,15 +91,16 @@
 
       <article class="project project-featured">
         <div class="project-head">
-          <span class="badge badge-muted">In Progress</span>
-          <h3>Traffic Congestion Controller</h3>
-          <p class="project-tagline">Reinforcement learning for adaptive traffic signal control</p>
+          <span class="badge">Completed</span>
+          <h3>Intelligent Traffic Moderator</h3>
+          <p class="project-tagline">A hybrid RL + optimization system for adaptive traffic signal control</p>
         </div>
-        <p class="project-desc">An ongoing project using reinforcement learning to adaptively manage traffic signal timing and ease congestion, building on earlier research into RL and explainable AI approaches for traffic management.</p>
+        <p class="project-desc">A traffic signal controller that pairs a DQN agent with a Pyomo-based linear programming optimizer. YOLOv8 and OpenCV extract lane-wise vehicle counts and queue density from live video or SUMO simulation, the DQN identifies which phase is most urgent, and the LP layer computes exact green-time allocations under cycle-time and min/max green constraints. Built with a FastAPI backend, PostgreSQL, and a real-time React dashboard, and validated end-to-end in SUMO before targeting real traffic video.</p>
         <ul class="project-tags">
+          <li>YOLOv8</li>
           <li>Reinforcement Learning</li>
-          <li>Python</li>
-          <li>Traffic Systems</li>
+          <li>Linear Programming</li>
+          <li>SUMO</li>
         </ul>
       </article>
 
